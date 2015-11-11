@@ -12,9 +12,11 @@
 <body>
 	<h1>Marvel Hero: Cable</h1>
 	<div>
+
 		<h2>Biography</h2>
 
-		<img src="http://static.comicvine.com/uploads/original/2/26147/3647439-cable_by_uncannyknack-d6ppiq21278294152.jpg" width="50%">
+		<img src="http://static.comicvine.com/uploads/original/2/26147/3647439-cable_by_uncannyknack-d6ppiq21278294152.jpg" width="40%" height="40%">
+
 		<p>Cable (Nathan Summers) is a fictional character appearing in American comic books published by Marvel Comics, most commonly in association with X-Force and the X-Men. Nathan Summers first appeared in Uncanny X-Men #201 (Jan. 1986) while Cable's identity was created by writer Louise Simonson and artist/co-writer Rob Liefeld and first appeared in The New Mutants #87 (March 1990). The son of Cyclops (Scott Summers) and Madelyne Pryor (Jean Grey's clone), and the "half" brother of Rachel Summers, he was born in the present Marvel timeline but was sent into a distant future.</p>
 
 		<hr />
@@ -34,6 +36,7 @@
 		<p>His techno-organic body parts possess enhanced strength and durability, and his techno-organic left eye gives him enhanced eyesight, allowing him to see farther than a normal human and in the infrared spectrum. He is also able to interface his techno-organic body parts with machinery, using them to hack into computers, open electronic locks, and travel through time</p>
 		<hr />
 	</div>
+
 	<div>
 		<table>
 			<tr><th>Comic Appearances</th><th>Date</th></tr>
@@ -42,25 +45,33 @@
 		</table>
 		<hr />
 	</div>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/Q3IpUFB2SZY" frameborder="0" allowfullscreen></iframe>
+	<iframe  width="40%" height="400px" src="https://www.youtube.com/embed/Q3IpUFB2SZY" frameborder="0" allowfullscreen></iframe>
 	<hr />
 	<div>
-		<h2>Tell us your favorite hero and we'll send you updates!</h4>
+		<h2>Tell us something about the heroes you're interested in and we'll send you updates!</h2>
 		<form id="favhero">
-			<select name="herolist" form="favhero">
-				<option>Choose your favorite hero...</option>
-				<option value="Spiderman">Spiderman</option>
-				<option value="Magneto">Magneto</option>
-				<option value="Wolverine">Wolverine</option>
-				<option value="Nightcrawler">Nightcrawler</option>
-			</select>
-			<br />
-			<h4>Other heroes? List them here!</h4>
-			<textarea placeholder="List your heroes here..." name="otherheroes"></textarea>
+			<fieldset>
+				<legend>Your Favorite Hero</legend>
+				<br/>
+				<select name="herolist" form="favhero">
+					<option>Choose your favorite hero...</option>
+					<option value="Spiderman">Spiderman</option>
+					<option value="Magneto">Magneto</option>
+					<option value="Wolverine">Wolverine</option>
+					<option value="Nightcrawler">Nightcrawler</option>
+				</select>
+				<br />
+				<h4>Or tell us here...</h4>
+				<input type="text" placeholder="Your favorite hero..." name="otherhero"></input>
+				<br/>
+			</fieldset>
 			<br/>
-			<h4>Enter your email address to get updates!</h4>
-			<input type="email" placeholder="Your email address..." name="email"></input>
-			<br/>
+			<fieldset>
+				<legend>Mailing List</legend>
+				<h4>Enter your email address to get updates!</h4>
+				<input type="email" placeholder="Your email address..." name="email"></input>
+				<br/>
+			</fieldset>
 			<br/>
 			<input type="submit" value="Submit!">
 		</form>
