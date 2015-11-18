@@ -8,42 +8,34 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type="text/css">
-       .large {
-            font-size: 300%;
-       }
-       #green {
-            color:green;
-       }
-       .underline {
-            text-decoration: underline;
-       }
-       .bold {
-            font-weight: bold;
-       }
-       .purplebox {
-            background-color: #8904B1;
-            width:200px;
-            height:200px;
-            z-index: 1;
-            margin-left: 400px;
-       }
-       .greenbox {
-            background-color: #167326;
-            width:300px;
-            height:200px;
-            z-index: 2;
-       }
+    div{
+      float:left;
+      width:100px;
+      height:100px;
+      margin:20px;
+    }
+    #first {
+      background: red;
+      border:5px yellow ridge;
+    }
+    #second{
+      background:blue;
+      border-style: ridge solid dotted dashed;
+      border-width:10px 5px 3px 1px;
+      border-color:green yellow blue black;
+    }
+    #third{
+      background:green;
+      border-radius:50px;
+    }
 
     </style>
 </head>
 
 <body>
-    <div class="purplebox">
-        <p class="large">This is some text.</p>
-    </div>
-    <div class="greenbox">
-        <p id="green" class="large">This is some more text.</p>
-    </div>
-    <p>The third <span class="underline large bold">word</span> in this paragraph is underlined.</p>
+  <div id= "first"></div>
+  <div id= "second"></div>
+  <div id= "third"></div>
+
 </body>
 </html>
