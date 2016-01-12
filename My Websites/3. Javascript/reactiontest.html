@@ -16,7 +16,11 @@
         padding:0;
         width:100%;
         height:100%;
+        text-align: center;
 
+    }
+    p{
+        margin:10px;
     }
     #box{
         background-color: red;
@@ -33,9 +37,38 @@
      #container{
         display: -webkit-flex;
         display: flex;
-        height:80%;
+        height:75%;
         margin:20px;
+        margin-bottom: 0;
 
+
+     }
+     .time{
+        font-weight: bold;
+        text-align: center;
+        padding-top:20px;
+        margin:0;
+     }
+     .time span{
+        font-size:2em;
+     }
+     .description{
+        font-size:1.1em;
+        font-style: italic;
+        position:fixed;
+        bottom:2%;
+        left:50%;
+        transform:translate(-50%,-50%);
+     }
+     #score-box{
+        padding-top:20px;
+
+     }
+     #score-box h2,p{
+        margin:0;
+     }
+     #score-box span{
+        font-size: 2em;
      }
     }
     </style>
@@ -43,64 +76,18 @@
 
 <body>
     <h1 id="title">Test Your Reaction Speed!</h1>
-    <p>Your reaction time: <span id="time"></span></p>
+    <div id="score-box">
+        <h2>High Score: <span id="high-score">0</span></h2>
+    </div>
+
+    <p class="time">Your reaction time: <span id="time">0</span> seconds</p>
+
+
     <div id="container">
     <div id="box"></div>
     </div>
+    <p class="description">Click on the shapes as they appear...As FAST as you can!</p>
 
-    <script type="text/javascript">
-
-        var clickedTime; var createdTime; var reactionTime;
-
-        function randomizeColor(){
-            var letters = '0123456789ABCDEF'.split('');
-            var color = '#';
-            for (var i =0; i < 6; i++){
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-        }
-
-        function randomizeSize(min,max){
-            var newSize = Math.floor(Math.random() * (max - min+1)) + min;
-            return newSize.toString() + '%';
-        }
-
-        function alterBox(boxId){
-
-            var box = document.getElementById(boxId);
-
-            var rand = Math.random();
-
-            time = rand * 5000;
-
-
-            setTimeout(function(){
-
-                    box.style.backgroundColor = randomizeColor();
-                    box.style.borderRadius = randomizeSize(0,50);
-                    box.style.width = randomizeSize(1,50);
-                    box.style.height = randomizeSize(1,50);
-                    box.style.left = randomizeSize(0,80);
-                    box.style.top = randomizeSize(0,80);
-
-                    document.getElementById('box').style.display = "block";
-                    createdTime=Date.now();
-                },time)
-
-        }
-
-        document.getElementById('box').onclick = function(){
-                clickedTime = Date.now();
-                reactionTime = (clickedTime - createdTime) / 1000;
-                document.getElementById('time').innerHTML= reactionTime;
-                this.style.display="none";
-                alterBox('box');
-        }
-
-        alterBox('box');
-
-
-    </script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
